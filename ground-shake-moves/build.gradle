@@ -1,0 +1,15 @@
+plugins {
+    id 'kotlin'
+}
+
+jar {
+    manifest {
+        attributes 'Plugin-Id': "ground-shake-moves",
+                'Plugin-Version': "1.0",
+                'Plugin-Class': 'com.pbo.move.animations.GroundShakeMoveAnimationsPlugin'
+    }
+}
+
+dependencies {
+    implementation project(":api")
+}

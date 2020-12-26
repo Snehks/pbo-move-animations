@@ -1,0 +1,26 @@
+plugins {
+    id 'kotlin'
+    id 'maven-publish'
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId 'com.pbo.move.animations'
+            artifactId 'api'
+
+            version '1.0'
+
+            from components.java
+        }
+    }
+}
+
+jar {
+    archiveName "pbo-move-animations-api.jar"
+}
+
+dependencies {
+    api "com.badlogicgames.gdx:gdx:$gdxVersion"
+    api "org.pf4j:pf4j:3.5.0"
+}
